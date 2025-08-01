@@ -1,0 +1,211 @@
+/* Base styles for all devices */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body,
+main {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- Define the Regular (Normal) version of Inter Variable Font --- */
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ======================== */
+/* --- Global variables --- */
+/* ======================== */
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --gray_700: hsl(0, 0%, 20%);
+  --gray_800: hsl(0, 0%, 12%);
+  --gray_950: hsl(0, 0%, 8%);
+}
+.font-inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+.font-inter-md {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+.font-inter-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+/* ======================== */
+/* --- Main --- */
+/* ======================== */
+.content {
+  padding: 0;
+  margin: 0;
+
+  height: 100%;
+  background-color: var(--gray_950);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  padding: 2.5rem 1.875rem;
+  margin: 0;
+
+  width: 25rem;
+  background-color: var(--gray_800);
+  border-radius: 0.9375rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.user-image {
+  padding: 0;
+  margin: 0.625rem 0;
+  
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+}
+.user-image > img {
+  padding: 0;
+  margin: 0;
+
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.user-info {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  padding: 0;
+  margin: 0.3125rem;
+}
+.location {
+  padding: 0 0;
+  margin: 0 0 0.625rem 0;
+
+  color: var(--green);
+}
+.desc {
+  padding: 0;
+  margin: 0.9375rem 0;
+
+  color: var(--white);
+  opacity: 0.8;
+}
+.user-links {
+  padding: 0;
+  margin: 0.625rem 0 0 0;
+  
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+.user-links > .link {
+  padding: 0.625rem;
+  margin: 0;
+
+  width: 100%;
+  background-color: var(--gray_700);
+  border-radius: 0.4375rem;
+  text-align: center;
+}
+.user-links > .link:hover {
+  background-color: var(--green);
+  color: var(--gray_700);
+  cursor: pointer;
+}
+
+/* ======================== */
+/* --- Footer --- */
+/* ======================== */
+.attribution {
+  display: none;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ======================== */
+/* --- Multi Screens --- */
+/* ======================== */
+/* Extra large devices (Large Desktops, 1960px and up) */
+@media (min-width: 1960px) {
+  html {
+    font-size: 20px;
+  }
+}
+/* Large devices (Desktops, 1200px and up) */
+@media (max-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+/* Medium devices (Tablets, 768px and up) */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+/* Small devices (Phones - Landscape, 576px and up) */
+@media (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+}
+/* Extra small devices (mobile Phones, 375px and up) */
+@media (max-width: 375px) {
+  html {
+    font-size: 13px;
+  }
+}
